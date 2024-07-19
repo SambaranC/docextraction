@@ -1,0 +1,29 @@
+{
+    "name": "docextraction",
+    "version": "0.0.1",
+    "description": "An SAP Fiori application.",
+    "keywords": [
+        "ui5",
+        "openui5",
+        "sapui5"
+    ],
+    "engines": {
+        "node": ">=18"
+      },
+
+    "main": "webapp/index.html",
+    "scripts": {
+        "build": "ui5 build preload --clean-dest --include-task=generateCachebusterInfo",
+        "start": "ui5 serve"
+    },
+    "devDependencies": { 
+        "@ui5/cli": "^3.11.0",
+        "karma": "^6.4.3",
+        "karma-chrome-launcher": "^3.2.0",
+        "karma-ui5": "^3.0.4",
+        "puppeteer": "^22.12.1",
+        "ui5-middleware-simpleproxy": "^3.2.16",
+        "ui5-task-zipper": "^3.1.4"
+
+    }
+}
