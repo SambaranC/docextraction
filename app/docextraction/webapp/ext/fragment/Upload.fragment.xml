@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:u="sap.ui.unified"
+   xmlns:s="docextraction.control">
+   <Dialog
+      id="helloDialog"
+      title="Hello Upload">
+    <s:FileUploaderV4 id="fileUploader" 
+                    name="myFileUpload"
+                    tooltip="Upload your file to the local server" 
+                    useMultipart="false" 
+								    uploadUrl="extraction/ProjectAttachments" 
+                    core:require="{handler: 'docextraction/ext/controller/customHandler'}" 
+                    uploadComplete="handler.handleUploadComplete"/>
+    <!-- <Button id= "idupload" text="Upload File" core:require="{handler: 'docextraction/ext/controller/customHandler'}" press="handler.handleUploadPress"/> -->
+    <beginButton>
+		<Button id="idupload" icon="sap-icon://upload" text="Upload" core:require="{handler: 'docextraction/ext/controller/customHandler'}" press="handler.handleUploadPress" type="Emphasized"/>
+	</beginButton>
+	<endButton>
+		<Button id="close" icon="sap-icon://decline" text="Close" core:require="{handler: 'docextraction/ext/controller/customHandler'}" press="handler.onCloseDialog" type="Emphasized"/>
+	</endButton>
+</Dialog>
+
+</core:FragmentDefinition>

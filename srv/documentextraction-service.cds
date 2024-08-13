@@ -20,6 +20,9 @@ service DocumentExtractionService @(path:'/extraction') {
     })
     entity WBSElements as projection on projectsystem.WBSElements;
 
+    entity ProjectAttachments as projection on projectsystem.ProjectAttachments;
+
     function documentExtraction()  returns String;
+   // action fileupload() returns String;
 
 }

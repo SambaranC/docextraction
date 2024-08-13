@@ -31,3 +31,18 @@ entity WBSElements : cuid, managed {
     afeNumber                : String;
     toProject                : Association to one Projects;
 }
+
+
+entity ProjectAttachments : cuid, managed {
+
+    @Core.ContentDisposition.Filename: fileName
+    @Core.MediaType: mediaType 
+    content           : LargeBinary;
+    fileName          : String;
+    url   : String;
+
+    @Core.IsMediaType   : true
+    mediaType         : String;
+   
+
+}

@@ -8,6 +8,8 @@ default-*.json
 gen/
 node_modules/
 target/
+dist/
+resources
 
 # Web IDE, App Studio
 .che/
@@ -32,3 +34,5 @@ mta_archives/
 
 # @cap-js/cds-typer
 @cds-models
+
+

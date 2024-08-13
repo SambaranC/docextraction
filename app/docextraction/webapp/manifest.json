@@ -131,6 +131,12 @@
                       "visible": true,
                       "enabled": true,
                       "text": "Extraction"
+                    },
+                    "Upload": {
+                      "press": "docextraction.ext.controller.customHandler.onPressUpload",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "Upload"
                     }
                   }
                 }
