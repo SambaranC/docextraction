@@ -136,7 +136,7 @@ module.exports = cds.service.impl(async function (srv) {
 
           console.log("jobId" , jobId);
          
-         await new Promise(resolve => setTimeout(resolve, 60000));
+         await new Promise(resolve => setTimeout(resolve, 40000));
 
          let status = await statusCheck.statuscheck(jobId,request);
          
