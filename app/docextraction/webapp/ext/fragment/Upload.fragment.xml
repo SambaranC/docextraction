@@ -5,10 +5,10 @@
    xmlns:s="docextraction.control">
    <Dialog
       id="helloDialog"
-      title="Hello Upload">
+      title="Upload Your file">
     <s:FileUploaderV4 id="fileUploader" 
                     name="myFileUpload"
-                    tooltip="Upload your file to the local server" 
+                    tooltip="Upload your file" 
                     useMultipart="false" 
 								    uploadUrl="extraction/ProjectAttachments" 
                     core:require="{handler: 'docextraction/ext/controller/customHandler'}" 

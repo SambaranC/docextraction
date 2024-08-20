@@ -24,7 +24,28 @@
           "odataVersion": "4.0"
         }
       }
-    }
+    },
+    "crossNavigation": {
+      "inbounds": {
+          "docextraction-inbound": {
+              "signature": {
+                  "parameters": {},
+                  "additionalParameters": "allowed"
+              },
+              "semanticObject": "projects",
+              "action": "manage",
+              "title": "{{flpTitle}}",
+              "subTitle": "{{flpSubtitle}}",
+              "info": "{{flpInfo}}",
+              "icon": "sap-icon://capital-projects",
+              "indicatorDataSource": {
+                  "dataSource": "mainService",
+                  "path": "Projects/$count?$filter=(IsActiveEntity eq false or SiblingEntity/IsActiveEntity eq null)",
+                  "refresh": 15
+              }
+          }
+      }
+  }
   },
   "sap.ui": {
     "technology": "UI5",
@@ -123,12 +144,13 @@
                   }
                 }
               },
+              "initialLoad": "Enabled",
               "content": {
                 "header": {
                   "actions": {
                     "DocExtraction": {
                       "press": "docextraction.ext.controller.customHandler.onPressExtraction",
-                      "visible": true,
+                      "visible": false,
                       "enabled": true,
                       "text": "Extraction"
                     },
